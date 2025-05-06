@@ -1,0 +1,16 @@
+\begin{tabular}{llcc}
+\toprule
+& & \multicolumn{2}{c}{ACC $\uparrow$} \\
+ \cmidrule(r){3-4}
+ &  & Mean & Std \\
+\midrule
+\multirow[t]{5}{*}{Unary} & DeepSet & 0.524 & 0.042 \\
+ & PointNet & 0.256 & 0.219 \\
+ & NormDeepSet & 0.393 & 0.052 \\
+ & HPDS & 0.435 & 0.023 \\
+ & QUANN-1 & \textbf{0.597} & 0.014 \\
+\vspace{2\baselineskip}\\
+\multirow[t]{2}{*}{Binary} & SetTransformer & 0.480 & 0.019 \\
+ & QUANN-2 & \textbf{0.589} & 0.041 \\
+\bottomrule
+\end{tabular}
