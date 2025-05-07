@@ -26,17 +26,11 @@ NUM_REPLICATES = 4
 OUTPUT_DIR = './results/MNIST_qualitative/'
 NUM_IMAGES = 1000
 AGG_FUNCS = {
-    # 'median' : torch.median,
     'mean' : torch.mean,
     'mode' : lambda x: x.mode().values,
-    # 'geometric_mean' : lambda x: x.prod().pow(1 / x.numel()),
-    # 'log_mean_exp' : lambda x: torch.log(x + 1e-6).mean().exp(),
-    # 'harmonic' : lambda x, dim=0, keepdim=False: (x.size(dim) / torch.sum(1.0 / (x + 1), dim=dim, keepdim=keepdim)),
-    # 'midrange' : lambda x: (x.max() - x.min()) / 2.0,
     'variance' : torch.var,
     'max' : torch.max,
-    'sum' : torch.sum,
-    # 'sum_module_10' : lambda x: x.sum() % 10    
+    'sum' : torch.sum
 }
 
 def get_embeddings(X, y, encoder, device = 'cpu'):    

@@ -241,53 +241,6 @@ class PointNet(nn.Module):
         return self.predictor(mu)
 
 
-# class MultiheadAttention(nn.Module):
-#     def __init__(self, dim, num_heads):
-#         super().__init__()
-#         self.attn = nn.MultiheadAttention(embed_dim=dim, num_heads=num_heads, batch_first=True)
-    
-#     def forward(self, x):
-#         return self.attn(x, x, x)[0]
-
-
-# class InducedSetAttentionBlock(nn.Module):
-#     def __init__(self, dim, num_heads, num_inducing):
-#         super().__init__()
-#         self.inducing_points = nn.Parameter(torch.randn(1, num_inducing, dim))
-#         self.mha1 = MultiheadAttention(dim, num_heads)
-#         self.mha2 = MultiheadAttention(dim, num_heads)
-
-#     def forward(self, x):
-#         # First attention using inducing points
-#         I = self.inducing_points.expand(x.size(0), -1, -1)  # Expand to batch size
-#         H = self.mha1(I, x, x)  # Induced attention
-#         return self.mha2(x, H, H)  # Standard self-attention
-
-
-# class PoolingByMultiheadAttention(nn.Module):
-#     def __init__(self, dim, num_heads, num_seeds):
-#         super().__init__()
-#         self.seeds = nn.Parameter(torch.randn(1, num_seeds, dim))
-#         self.mha = MultiheadAttention(dim, num_heads)
-
-#     def forward(self, x):
-#         S = self.seeds.expand(x.size(0), -1, -1)  # Expand to batch size
-#         return self.mha(S, x, x)  # Pooling via multihead attention
-
-
-# class SetTransformer(nn.Module):
-#     def __init__(self, input_dim, output_dim, num_heads=4, num_inducing=8, num_seeds=1):
-#         super().__init__()
-#         self.encoder = InducedSetAttentionBlock(input_dim, num_heads, num_inducing)
-#         self.pooling = PoolingByMultiheadAttention(input_dim, num_heads, num_seeds)
-#         self.mlp = nn.Sequential(nn.Linear(input_dim, output_dim), nn.ReLU())
-
-#     def forward(self, x):
-#         x = self.encoder(x)
-#         x = self.pooling(x)
-#         return self.mlp(x).squeeze(1)  # Final representation
-
-
 class SmallImageEncoder(nn.Module):
     def __init__(self, latent_dim=32):
         super(SmallImageEncoder, self).__init__()

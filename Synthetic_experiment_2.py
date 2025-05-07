@@ -15,19 +15,14 @@ TRAIN_SET_SIZE = 10000
 EVAL_SET_SIZE = 1000
 TEST_SET_SIZE = 1000
 AGG_FUNCS = [
-  # 'L1_medoid', 
-  'L2_medoid', 
-  # 'P1_mean', 
+  'L2_medoid',  
   'P2_mean', 
   'midpoint',
   'geometric_median', 
   'marginal_median',
   'log_sum_exp', 
-  'norm_max',
-  # 'norm_min', 
+  'norm_max', 
   'row_max', 
-  # 'row_min', 
-  # 'row_sum',
   'variance',   
   'skewness' 
 ]
