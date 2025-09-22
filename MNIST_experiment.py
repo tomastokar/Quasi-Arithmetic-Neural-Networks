@@ -26,7 +26,8 @@ AGG_FUNCS = {
     'midrange' : lambda x: (x.max() - x.min()) / 2.0,
     'variance' : torch.var,
     'max' : torch.max,
-    'sum' : torch.sum
+    'sum' : torch.sum,
+    # 'sum_module_10' : lambda x: x.sum() % 10    
 }
 
 def main():

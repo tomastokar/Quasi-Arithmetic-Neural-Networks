@@ -1,13 +1,13 @@
-\begin{tabular}{lrrrrrrrrrrrrrr}
+\begin{tabular}{lrrrrrrrrrrrrrrrrrr}
 \toprule
- & \multicolumn{10}{c}{\textbf{Unary}} & \multicolumn{4}{c}{\textbf{Binary}} \\
+ & \multicolumn{10}{c}{\textbf{Unary}} & \multicolumn{4}{c}{\textbf{Binary}} & \multicolumn{4}{c}{\textbf{Non-Janossy}} \\
 \cmidrule(r){2-11} \cmidrule(r){12-15}
- & \multicolumn{2}{c}{\textbf{DeepSet}} & \multicolumn{2}{c}{\textbf{PointNet}} & \multicolumn{2}{c}{\textbf{NormDeepSet}} & \multicolumn{2}{c}{\textbf{HPDS}} & \multicolumn{2}{c}{\textbf{QUANN-1}} & \multicolumn{2}{c}{\textbf{SetTransformer}} & \multicolumn{2}{c}{\textbf{QUANN-2}} \\
+ & \multicolumn{2}{c}{\textbf{DeepSet}} & \multicolumn{2}{c}{\textbf{PointNet}} & \multicolumn{2}{c}{\textbf{NormDeepSet}} & \multicolumn{2}{c}{\textbf{HPDS}} & \multicolumn{2}{c}{\textbf{QUANN-1}} & \multicolumn{2}{c}{\textbf{SetTransformer}} & \multicolumn{2}{c}{\textbf{QUANN-2}} & \multicolumn{2}{c}{\textbf{FSPool}} & \multicolumn{2}{c}{\textbf{SlotAtt}} \\
 \cmidrule(r){2-3} \cmidrule(r){4-5} \cmidrule(r){6-7} \cmidrule(r){8-9} \cmidrule(r){10-11} \cmidrule(r){12-13} \cmidrule(r){14-15}
- & Mean & Std & Mean & Std & Mean & Std & Mean & Std & Mean & Std & Mean & Std & Mean & Std \\
+ & Mean & Std & Mean & Std & Mean & Std & Mean & Std & Mean & Std & Mean & Std & Mean & Std & Mean & Std & Mean & Std \\
 \midrule
-256 & 0.648 & 0.007 & \textbf{0.788} & 0.005 & 0.649 & 0.006 & 0.658 & 0.009 & 0.676 & 0.003 & 0.676 & 0.006 & \textbf{0.773} & 0.011 \\
-512 & 0.649 & 0.005 & \textbf{0.788} & 0.002 & 0.520 & 0.011 & 0.667 & 0.007 & 0.688 & 0.013 & 0.679 & 0.009 & \textbf{0.762} & 0.011 \\
-1024 & 0.645 & 0.012 & \textbf{0.791} & 0.006 & 0.534 & 0.007 & 0.663 & 0.013 & 0.686 & 0.013 & 0.678 & 0.009 & \textbf{0.782} & 0.005 \\
+256 & 0.648 & 0.007 & \underline{0.788} & 0.005 & 0.649 & 0.006 & 0.658 & 0.009 & 0.676 & 0.003 & 0.676 & 0.006 & 0.773 & 0.011 & \textbf{0.796} & 0.011 & 0.726 & 0.003 \\
+512 & 0.649 & 0.005 & \underline{0.788} & 0.002 & 0.520 & 0.011 & 0.667 & 0.007 & 0.688 & 0.013 & 0.679 & 0.009 & 0.762 & 0.011 & \textbf{0.791} & 0.013 & 0.739 & 0.014 \\
+1024 & 0.645 & 0.012 & \underline{0.791} & 0.006 & 0.534 & 0.007 & 0.663 & 0.013 & 0.686 & 0.013 & 0.678 & 0.009 & 0.782 & 0.005 & \textbf{0.794} & 0.012 & 0.727 & 0.012 \\
 \bottomrule
 \end{tabular}

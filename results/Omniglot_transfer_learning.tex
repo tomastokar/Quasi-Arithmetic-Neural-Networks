@@ -3,6 +3,7 @@
 & & \multicolumn{2}{c}{ACC $\uparrow$} \\
  \cmidrule(r){3-4}
  &  & Mean & Std \\
+ & Model &  &  \\
 \midrule
 \multirow[t]{5}{*}{Unary} & DeepSet & 0.524 & 0.042 \\
  & PointNet & 0.256 & 0.219 \\
@@ -11,6 +12,9 @@
  & QUANN-1 & \textbf{0.597} & 0.014 \\
 \vspace{2\baselineskip}\\
 \multirow[t]{2}{*}{Binary} & SetTransformer & 0.480 & 0.019 \\
- & QUANN-2 & \textbf{0.589} & 0.041 \\
+ & QUANN-2 & \underline{0.589} & 0.041 \\
+\vspace{2\baselineskip}\\
+\multirow[t]{2}{*}{Non-Janossy} & FSPool & 0.463 & 0.051 \\
+ & SlotAtt & 0.484 & 0.018 \\
 \bottomrule
 \end{tabular}

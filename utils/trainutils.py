@@ -232,6 +232,65 @@ class SetTester:
         average_perf = total_perf / len(self.dataloader)     
         return average_loss, average_perf
                         
+# class SetModelTrainer:
+#     def __init__(self, 
+#                  model, 
+#                  dataset,
+#                  loss_func,
+#                  eval_dataset = None,
+#                  batch_size = 128,
+#                  learning_rate = 1.e-4,
+#                  decay = 1e-5):
+        
+#         self.model = model
+#         self.loss_func = loss_func
+       
+#        # Optimizer
+#         self.optimizer = torch.optim.Adam(
+#             self.model.parameters(),
+#             lr = learning_rate,
+#             weight_decay = decay
+#         )
+        
+        
+        
+#     def train(self, steps: int):
+#         for step in range(steps):
+#             loss = self.step()
+#             print('Step {}/{}; Loss: {:1.3f}'.format(step, steps, loss))        
+#         return loss
+    
+#     def sample(self):
+#         k = random.randint(2, self.max_k)
+#         X = torch.rand(k, self.model.input_dim)
+#         y = self.agg_func(X)
+#         return X, y
+            
+#     def step(self):    
+#         # Init containers
+#         targets, estimates = [], []
+        
+#         # Populate batch and apply model
+#         for _ in range(self.batch_size):
+#             X, y = self.sample()
+#             y_hat = self.model(X)
+#             targets.append(y)
+#             estimates.append(y_hat)
+            
+        
+#         # Store targets and estimates
+#         targets, estimates = torch.cat(targets), torch.cat(estimates)
+        
+#         # Calculate loss
+#         loss = self.loss_func(estimates, targets)
+        
+#         # Backpropagate
+#         self.optimizer.zero_grad()
+#         loss.backward()
+#         self.optimizer.step()        
+        
+#         return loss.item()
+
 
 class ImageClassifierTrainer:
     def __init__(self, model, train_dataset, val_dataset,

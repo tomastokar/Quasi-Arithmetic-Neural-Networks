@@ -6,7 +6,7 @@ QUANNs extend conventional set function models by replacing fixed pooling operat
 
 ## Data
 
-Before running the code, ensure that a ./data directory exists in the project folder:
+Before running the code, secure the required datasets and ensure that a ./data directory exists in the project folder:
 ```console
 mkdir -p ./data
 ```

@@ -1,18 +1,18 @@
-\begin{tabular}{lrrrrrr}
+\begin{tabular}{lrrrrrrrr}
 \toprule
- & \multicolumn{2}{c}{\textbf{Ablation 1}} & \multicolumn{2}{c}{\textbf{Ablation 2}} & \multicolumn{2}{c}{\textbf{QUANN-1}} \\
-\cmidrule(r){2-3} \cmidrule(r){4-5} \cmidrule(r){6-7}
- & Mean & Std & Mean & Std & Mean & Std \\
+ & \multicolumn{2}{c}{\textbf{Ablation 1}} & \multicolumn{2}{c}{\textbf{Ablation 2}} & \multicolumn{2}{c}{\textbf{Ablation 3}} & \multicolumn{2}{c}{\textbf{QUANN-1}} \\
+\cmidrule(r){2-3} \cmidrule(r){4-5} \cmidrule(r){6-7} \cmidrule(r){8-9}
+ & Mean & Std & Mean & Std & Mean & Std & Mean & Std \\
 \midrule
-Geometric median & 4.521 & 0.213 & 14.955 & 0.704 & 4.138 & 0.453 \\
-Quadratic mean & 1.011 & 0.122 & 3.643 & 0.101 & 0.988 & 0.111 \\
-Median & 4.628 & 0.135 & 15.236 & 0.781 & \textbf{4.104} & 0.383 \\
-Medoid & 18.725 & 0.723 & 31.075 & 1.243 & \textbf{17.312} & 0.667 \\
-Midpoint & 25.914 & 0.571 & 38.691 & 0.915 & \textbf{24.236} & 0.497 \\
-VecMaxNorm & 94.926 & 2.440 & 137.045 & 4.350 & \textbf{89.499} & 2.363 \\
-Max & 20.929 & 0.817 & 43.143 & 1.854 & \textbf{13.583} & 0.565 \\
-LogSumExp & 19.242 & 1.078 & 41.386 & 1.463 & \textbf{12.557} & 0.856 \\
-Variance & 132.388 & 10.578 & 105.119 & 9.594 & \textbf{74.128} & 15.605 \\
-Skewness & 0.027 & 0.001 & 0.027 & 0.001 & 0.027 & 0.001 \\
+Geometric median & \underline{4.521} & 0.213 & 14.955 & 0.704 & 14.096 & 1.228 & \textbf{4.138} & 0.453 \\
+Quadratic mean & \underline{1.011} & 0.122 & 3.643 & 0.101 & 6.667 & 0.805 & \textbf{0.988} & 0.111 \\
+Median & \underline{4.628} & 0.135 & 15.236 & 0.781 & 14.171 & 1.028 & \textbf{4.104} & 0.383 \\
+Medoid & \underline{18.725} & 0.723 & 31.075 & 1.243 & 27.179 & 1.337 & \textbf{17.312} & 0.667 \\
+Midpoint & \underline{25.914} & 0.571 & 38.691 & 0.915 & 33.578 & 0.965 & \textbf{24.236} & 0.497 \\
+VecMaxNorm & \underline{94.926} & 2.440 & 137.045 & 4.350 & 114.042 & 1.933 & \textbf{89.499} & 2.363 \\
+Max & \underline{20.929} & 0.817 & 43.143 & 1.854 & 45.038 & 6.135 & \textbf{13.583} & 0.565 \\
+LogSumExp & \underline{19.242} & 1.078 & 41.386 & 1.463 & 43.969 & 7.656 & \textbf{12.557} & 0.856 \\
+Variance & 132.388 & 10.578 & \underline{105.119} & 9.594 & 589.282 & 95.461 & \textbf{74.128} & 15.605 \\
+Skewness & 0.027 & 0.001 & \textbf{0.027} & 0.001 & 0.074 & 0.032 & \underline{0.027} & 0.001 \\
 \bottomrule
 \end{tabular}

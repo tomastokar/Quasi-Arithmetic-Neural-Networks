@@ -1,15 +1,15 @@
-\begin{tabular}{lrrrrrrrrrrrrrr}
+\begin{tabular}{lrrrrrrrrrrrrrrrrrr}
 \toprule
- & \multicolumn{10}{c}{\textbf{Unary}} & \multicolumn{4}{c}{\textbf{Binary}} \\
+ & \multicolumn{10}{c}{\textbf{Unary}} & \multicolumn{4}{c}{\textbf{Binary}} & \multicolumn{4}{c}{\textbf{Non-Janossy}} \\
 \cmidrule(r){2-11} \cmidrule(r){12-15}
- & \multicolumn{2}{c}{\textbf{DeepSet}} & \multicolumn{2}{c}{\textbf{PointNet}} & \multicolumn{2}{c}{\textbf{NormDeepSet}} & \multicolumn{2}{c}{\textbf{HPDS}} & \multicolumn{2}{c}{\textbf{QUANN-1}} & \multicolumn{2}{c}{\textbf{SetTransformer}} & \multicolumn{2}{c}{\textbf{QUANN-2}} \\
+ & \multicolumn{2}{c}{\textbf{DeepSet}} & \multicolumn{2}{c}{\textbf{PointNet}} & \multicolumn{2}{c}{\textbf{NormDeepSet}} & \multicolumn{2}{c}{\textbf{HPDS}} & \multicolumn{2}{c}{\textbf{QUANN-1}} & \multicolumn{2}{c}{\textbf{SetTransformer}} & \multicolumn{2}{c}{\textbf{QUANN-2}} & \multicolumn{2}{c}{\textbf{FSPool}} & \multicolumn{2}{c}{\textbf{SlotAtt}} \\
 \cmidrule(r){2-3} \cmidrule(r){4-5} \cmidrule(r){6-7} \cmidrule(r){8-9} \cmidrule(r){10-11} \cmidrule(r){12-13} \cmidrule(r){14-15}
- & Mean & Std & Mean & Std & Mean & Std & Mean & Std & Mean & Std & Mean & Std & Mean & Std \\
+ & Mean & Std & Mean & Std & Mean & Std & Mean & Std & Mean & Std & Mean & Std & Mean & Std & Mean & Std & Mean & Std \\
 \midrule
-max & 0.120 & 0.012 & 0.079 & 0.002 & 0.128 & 0.014 & 0.071 & 0.009 & 0.067 & 0.022 & 0.099 & 0.009 & \textbf{0.069} & 0.014 \\
-mean & 0.095 & 0.013 & 0.115 & 0.011 & 0.089 & 0.005 & 0.047 & 0.005 & \textbf{0.023} & 0.004 & 0.031 & 0.002 & \textbf{0.023} & 0.003 \\
-mode & 3.903 & 0.150 & 5.498 & 0.270 & 4.119 & 0.170 & 4.011 & 0.295 & \textbf{2.219} & 0.163 & 3.085 & 0.367 & \textbf{1.579} & 0.408 \\
-sum & 5.924 & 0.694 & 18.740 & 0.921 & 7.706 & 1.575 & 5.844 & 0.738 & \textbf{4.066} & 0.673 & 4.090 & 0.601 & \textbf{2.861} & 0.251 \\
-variance & 1.747 & 0.226 & 2.143 & 0.121 & 1.927 & 0.132 & 1.265 & 0.414 & \textbf{0.605} & 0.171 & 2.284 & 0.298 & \textbf{0.605} & 0.043 \\
+max & 0.120 & 0.012 & 0.079 & 0.002 & 0.128 & 0.014 & 0.071 & 0.009 & \textbf{0.067} & 0.022 & 0.099 & 0.009 & \underline{0.069} & 0.014 & 0.095 & 0.018 & 0.085 & 0.025 \\
+mean & 0.095 & 0.013 & 0.115 & 0.011 & 0.089 & 0.005 & 0.047 & 0.005 & \underline{0.023} & 0.004 & 0.031 & 0.002 & \textbf{0.023} & 0.003 & 0.075 & 0.007 & 0.029 & 0.005 \\
+mode & 3.903 & 0.150 & 5.498 & 0.270 & 4.119 & 0.170 & 4.011 & 0.295 & \underline{2.219} & 0.163 & 3.085 & 0.367 & \textbf{1.579} & 0.408 & 2.847 & 0.479 & 3.255 & 0.124 \\
+sum & 5.924 & 0.694 & 18.740 & 0.921 & 7.706 & 1.575 & 5.844 & 0.738 & \underline{4.066} & 0.673 & 4.090 & 0.601 & \textbf{2.861} & 0.251 & 5.202 & 0.441 & 66.324 & 5.957 \\
+variance & 1.747 & 0.226 & 2.143 & 0.121 & 1.927 & 0.132 & 1.265 & 0.414 & \underline{0.605} & 0.171 & 2.284 & 0.298 & \textbf{0.605} & 0.043 & 1.317 & 0.201 & 1.956 & 0.120 \\
 \bottomrule
 \end{tabular}

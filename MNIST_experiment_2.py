@@ -18,11 +18,17 @@ NUM_REPLICATES = 4
 OUTPUT_DIR = './results/MNIST_experiment_2/'
 
 AGG_FUNCS = {
+    # 'median' : torch.median,
     'mean' : torch.mean,
     'mode' : lambda x: x.mode().values,
+    # 'geometric_mean' : lambda x: x.prod().pow(1 / x.numel()),
+    # 'log_mean_exp' : lambda x: torch.log(x + 1e-6).mean().exp(),
+    # 'harmonic' : lambda x, dim=0, keepdim=False: (x.size(dim) / torch.sum(1.0 / (x + 1), dim=dim, keepdim=keepdim)),
+    # 'midrange' : lambda x: (x.max() - x.min()) / 2.0,
     'variance' : torch.var,
     'max' : torch.max,
-    'sum' : torch.sum
+    'sum' : torch.sum,
+    # 'sum_module_10' : lambda x: x.sum() % 10    
 }
 
 def main():
@@ -40,7 +46,7 @@ def main():
     encoder = SmallImageEncoder(latent_dim=LATENT_DIM)
     
     # Load paramters
-    encoder.load_state_dict(torch.load("Omniglot_encoder_weights.pt"))
+    encoder.load_state_dict(torch.load("MNIST_encoder_weights.pt"))
     
     # Freeze all the weights
     for param in encoder.parameters():
